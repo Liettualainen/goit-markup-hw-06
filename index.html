@@ -59,13 +59,75 @@
             Замовити послугу</button>
 
             <div class="backdrop is-hidden" data-modal>
-              <div class="modal">          
+              <div class="modal">
+
+               
+                
+                <form class="main-button-form">
+                   <span class="modal-button-slogan">Залиште свої данні, ми вам передзвонимо</span>
+                  <span class="form-explanation">Ім'я</span>
+                  <div class="main-form-button">
+                     <label for="name" class="form-ref mame"><svg class="modul-telegram">
+                      <use href="./images/icons.svg#icon-person-name">
+                      </use>
+                    </svg>
+                      </label>
+                   
+                  <input  type="text" class="input-form" name="name" id="name" />                    
+                  </div>
+
+                  <span class="form-explanation">Телефон</span>
+                  <div class="main-form-button">
+                    <label for="tel" class="form-ref mame"><svg class="modul-telegram">
+                        <use href="./images/icons.svg#icon-phone">
+                        </use>
+                      </svg>
+                    </label>
+                  
+                    <input type="tel" class="input-form" name="tel" id="tel" />
+                  </div>
+
+                    <span class="form-explanation">Пошта</span>
+                    <div class="main-form-button">
+                      <label for="email" class="form-ref mame"><svg class="modul-telegram">
+                          <use href="./images/icons.svg#icon-email">
+                          </use>
+                        </svg>
+                      </label>
+                    
+                      <input type="email" class="input-form" name="email" id="email" />
+                    </div>
+                   
+                  <span class="form-explanation">Коментарії</span>
+                  <div class="main-form-button">
+                    <label for="comments"></label>
+                  <textarea name="comments" rows="5" placeholder="Введіть текст" id="comments"></textarea> 
+                  </div>
+                  </form>    
+                    
+                  <div class="main-form-checkbox">
+                    <div class="checkbox-option">                    
+                    <input type="checkbox"  class="input-checkbox" name="modal-questionary" id="modal-policy">
+                  <label for="modal-policy"><svg class="modul-telegram-check">
+                    <use href="./images/icons.svg#icon-checkbox">
+                    </use>
+                  </svg>Згоден з розсилкою та приймаю <a href="" class="contract">Умови договору</a>
+                  </label>
+                  </div>
+              
+                </div>          
+                    
+
+                   <button class="submit-button" type="submit">Відправити</button>
+                
+                   
+                
+                
                 <button data-modal-close class="backdrop-modal-icon">
-                  <svg viewBox=" 0 0 18 18" xmlns="http://www.w3.org/2000/svg" 
-                  class="backdrop-icon-modal">
-                  <path d="M15 4.108 13.892 3 9.5 7.392 5.108 
-                    3 4 4.108 8.392 8.5 4 12.892 5.108 14 9.5 9.608
-                    13.892 14 15 12.892 10.608 8.5 15 4.108Z" /></svg>
+                  <svg>
+                  <use href="./images/icons.svg#icon-close-mark" class="backdrop-icon-modal">
+                  </use>
+                  </svg>
                 </button>
               </div>
             </div>
@@ -459,19 +521,20 @@
       </div>
 
       <div class="foot-ref-block">
-        <span class="foot-slogan">підпишіться на розсилку</span>
-        <form action="">
-          <label class="">
-          <input type="email" name="E-mail" placeholder="E-mail">
-        </label>
+        
+
+        <form class="email-ref">
+          <span class="foot-slogan">підпишіться на розсилку</span>
+          <label for="email"></label>
+        <input type="email" name="E-mail" placeholder="E-mail" id="email" />
         </form>
         
-        <button type="button" class="button footer">Підписатись <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 0 0 13.5l7.67 2.84L19.5 5.25l-8.998 12.14.007.002-.009-.002V24l4.301-5.018L20.251 21 24 0Z"
-            fill="#fff" />
+        <button class="foot-submit-button" type="submit">Підписатись
+        <svg class="foot-telegram">
+          <use href="./images/icons.svg#icon-telegramm" >
+          </use>
         </svg>
-        </svg></button>
-        
+          </button>
 
       </div>
 
