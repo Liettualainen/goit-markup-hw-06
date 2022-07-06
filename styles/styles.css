@@ -274,11 +274,10 @@ header {
     position: absolute;
     top: 8px;
     right: 8px;
+    
 
     width: 30px;
     height: 30px;
-
-    box-sizing: border-box;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--background-color-main);
@@ -863,13 +862,13 @@ textarea {
         transition: fill var(--twohundred-dur) var(--timing-function);
 }
 
-input, textarea {    
+.input-form, textarea {    
     width: 100%;
     font: inherit;
-    margin: 0px;
-    font-size: var(--font-size-extrasmall);
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    margin: 0px;
+    font-size: var(--font-size-extrasmall);
     transition: border var(--twohundred-dur) var(--timing-function);
 }
 .main-form-button textarea::placeholder {
@@ -898,25 +897,40 @@ color: #2196F3;
 .checkbox-option input[type='checkbox'] {
     position: absolute;
     top: 4px;
-    transform: translateX(-20px);
-    width: 15px;
+    transform: translateX(-20px);   
+    border-radius: 2px;
+    width: 16px;
     height: 15px;
-    opacity: 1; 
+    
+}
+.input-checkbox {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    border: 2px solid var(--color-header);
 }
 
-.modul-telegram-check {
+.input-checkbox:checked {
+    border: 2px solid var(--color-button);
+    background-color: var(--color-button);
+    background-image: url('../images/icon_check_white.svg');
+    background-size: contain;
+    background-origin: border-box;
+}
+/* .modul-telegram-check {
         position: absolute;
-        top: 11px;
+        top: 12.5px;
         transform: translateY(-50%);
-        left: 32px;
+        left: 31px;
 
-        width: 15px;
-        height: 15px;
-            transition: fill 50000ms var(--timing-function);
-}
+        width: 18px;
+        height: 18px;
+        transition: fill 50000ms var(--timing-function);
+} */
 
- input:hover, textarea:hover,
- input:focus, textarea:focus
+ .input-form:hover, textarea:hover,
+ .input-form:focus, textarea:focus
   {   
     border: 1px solid var(--color-button);
     cursor: pointer;
