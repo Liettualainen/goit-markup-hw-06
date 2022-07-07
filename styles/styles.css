@@ -614,12 +614,14 @@ margin-left: 200px;
 
 
 .foot-ref-block {
-    display: flex;    
     margin-left: 93px;
     list-style: none;
 }
 
 .foot-slogan {
+    display: block;
+    width: 100%;
+    padding: 0;
     margin: 0;
     margin-bottom:  20px;
     font-weight: var(--font-weight-seven);
@@ -629,7 +631,11 @@ margin-left: 200px;
     text-transform: uppercase;  
     color: var(--background-color-main);
 }
-.email-ref input {
+
+.email-ref {
+   display: flex; 
+}
+.email-ref input {    
     width: 358px;
     height: 50px;
     padding: 15px 0px 15px 16px;
@@ -639,6 +645,8 @@ margin-left: 200px;
     color: rgba(255, 255, 255, 0.6);
     background-color: var(--background-color-addition);
 }
+
+
 .foot-submit-button {
     display: flex;
     justify-content: left;
@@ -646,7 +654,7 @@ margin-left: 200px;
     cursor: pointer;
      
     padding: 10px 8px 10px 29px;
-    margin-top: 36px;
+
     margin-left: 17px;
     width: 200px;
     height: 50px;
@@ -809,8 +817,13 @@ textarea {
     width: 100%;
     resize: none;
 }
+.main-button-form {
+        width: 448px;
+        margin-left: auto;
+        margin-right: auto; 
+}
 .modal-button-slogan {
-    display: inline-block;
+        display: inline-block;
         font-weight: var(--font-weight-seven);
         font-size: 20px;
         line-height: 1.15;
@@ -819,11 +832,7 @@ textarea {
         color: #212121;
         margin-bottom: 12px; 
 }
-.main-button-form {
- width: 448px;
-  margin-left: auto;
-  margin-right: auto; 
-}
+
 .form-explanation {
         display: inline-block;
         width: 100%;       
@@ -840,16 +849,13 @@ textarea {
 }
 
 .main-form-button input {
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 40px;
+        padding: 11px 0px 11px 40px;
 }
 .main-form-button {
-    position: relative;
-
+        position: relative;
 }
 .main-form-button:not(:last-child) {
-    margin-bottom: 10px;
+        margin-bottom: 10px;
 }
 .modul-telegram 
 {       position: absolute;
@@ -862,87 +868,71 @@ textarea {
         transition: fill var(--twohundred-dur) var(--timing-function);
 }
 
-.input-form, textarea {    
-    width: 100%;
-    font: inherit;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    margin: 0px;
-    font-size: var(--font-size-extrasmall);
-    transition: border var(--twohundred-dur) var(--timing-function);
-}
-.main-form-button textarea::placeholder {
-color: rgba(117, 117, 117, 0.5);;
-}
+
+.input-form, textarea {
+        width: 100%;
+        font: inherit;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        margin: 0px;
+        font-size: var(--font-size-extrasmall);
+        transition: border var(--twohundred-dur) var(--timing-function);
+    }
+ .main-form-button:hover .input-form, textarea:hover,
+ .main-form-button:focus .input-form, textarea:focus,
+ .input-form:focus  
+    {
+    outline: none !important;
+    border: 1px solid var(--color-button);
+    cursor: pointer;
+    }
+.main-form-button:hover .modul-telegram,
+.main-form-button:focus .modul-telegram
+    {
+    fill: var(--color-button);
+    /* border: transparent; */
+    cursor: pointer;
+    }
 
 .main-form-button textarea
 {  
-    padding: 12px 16px;
+        padding: 12px 16px;
 }
-
-
 .main-form-checkbox {
-    position: relative;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-weight: var(--font-weight-four);
-    font-size: var(--font-size-extrasmall);
-    line-height: 1.71;
-    letter-spacing: var(--letter-spacing-medium);    
-    color: var(--color-addition);
-}
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-weight: var(--font-weight-four);
+        font-size: var(--font-size-extrasmall);
+        line-height: 1.71;
+        letter-spacing: var(--letter-spacing-medium);    
+        color: var(--color-addition);
+    }
 .main-form-checkbox .contract {
-color: #2196F3;
+        color: #2196F3;
 }
 .checkbox-option input[type='checkbox'] {
-    position: absolute;
-    top: 4px;
-    transform: translateX(-20px);   
-    border-radius: 2px;
-    width: 16px;
-    height: 15px;
-    
+        position: absolute;
+        top: 4px;
+        transform: translateX(-20px);   
+        border-radius: 2px;
+        width: 16px;
+        height: 15px;    
 }
 .input-checkbox {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    position: absolute;
-    border: 2px solid var(--color-header);
-}
-
-.input-checkbox:checked {
-    border: 2px solid var(--color-button);
-    background-color: var(--color-button);
-    background-image: url('../images/icon_check_white.svg');
-    background-size: contain;
-    background-origin: border-box;
-}
-/* .modul-telegram-check {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
         position: absolute;
-        top: 12.5px;
-        transform: translateY(-50%);
-        left: 31px;
-
-        width: 18px;
-        height: 18px;
-        transition: fill 50000ms var(--timing-function);
-} */
-
- .input-form:hover, textarea:hover,
- .input-form:focus, textarea:focus
-  {   
-    border: 1px solid var(--color-button);
-    cursor: pointer;
+        border: 2px solid var(--color-header);
 }
-
-.main-form-button:hover .modul-telegram,
-.main-form-button:focus .modul-telegram {
-    fill: var(--color-button);
-    border: transparent;
-    cursor: pointer;
+.input-checkbox:checked {
+        border: 2px solid var(--color-button);
+        background-color: var(--color-button);
+        background-image: url('../images/icon_check_white.svg');
+        background-size: contain;
+        background-origin: border-box;
 }
-
 
 .submit-button {
     padding: 0;
